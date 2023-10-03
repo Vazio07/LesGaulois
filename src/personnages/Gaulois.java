@@ -1,5 +1,7 @@
 package personnages;
 
+import java.util.Random;
+
 public class Gaulois {
 	private String nom;
 	private int force;
@@ -33,10 +35,15 @@ public class Gaulois {
 	public void setEffetPotion(int effetPotion) {
 		this.effetPotion = effetPotion;
 	}
+	
+	public void boirePotion(int forcePotion) {
+		this.effetPotion=forcePotion;
+		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois dÃ©cuplÃ©e");
+	}
 
 	public void frapper(Romain romain) {
 		System.out.println(nom + "envoie un grand coup dans la machoire de " + romain.getNom());
-		romain.recevoirCoup(force/3);
+		romain.recevoirCoup((force/3)*effetPotion);
 	}
 	
 	public String prendreParole() {
@@ -44,7 +51,7 @@ public class Gaulois {
 	}
 	
 	public void parler (String texte) {
-		System.out.println(prendreParole() + "«" + texte + "»");
+		System.out.println(prendreParole() + "ï¿½" + texte + "ï¿½");
 	}
 	
 	@Override
@@ -56,6 +63,7 @@ public class Gaulois {
 		Gaulois asterix;
 		asterix = new Gaulois("Asterix",8);
 		System.out.println(asterix);
-		asterix.parler("Bonjour à tous");
+		asterix.parler("Bonjour ï¿½ tous");
+		asterix.boirePotion(5);
 	}
 }

@@ -24,14 +24,23 @@ public class Druide {
 		Random random = new Random();
 		forcePotion = random.nextInt(effetPotionMin , effetPotionMax);
 		if (forcePotion > 7) {
-			parler("J'ai préparé une super potion de force");
+			parler("J'ai prepare une super potion de force");
 		}else{
-			parler("«Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force "+forcePotion);
+			parler("Je n'ai pas trouve tout les ingredients, ma potion est seulement de force "+forcePotion);
+		}
+	}
+	
+	public void booster(Gaulois gaulois) {
+		if ((gaulois.getNom()).equals("Obelix")) {
+			System.out.println("Non, ObÃ©lix !... Tu nâ€™auras pas de potion\r\n"
+					+ "magique !");
+		}else {
+			gaulois.boirePotion(forcePotion);
 		}
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "«" + texte + "»");
+		System.out.println(prendreParole() + "Â« " + texte + " Â»");
 	}
 	
 	private String prendreParole() {
