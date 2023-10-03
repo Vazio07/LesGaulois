@@ -32,15 +32,14 @@ public class Druide {
 	
 	public void booster(Gaulois gaulois) {
 		if ((gaulois.getNom()).equals("Obelix")) {
-			System.out.println("Non, Obélix !... Tu n’auras pas de potion\r\n"
-					+ "magique !");
+			System.out.println("Non, Obelix !... Tu n auras pas de potion magique !");
 		}else {
 			gaulois.boirePotion(forcePotion);
 		}
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + " »");
+		System.out.println(prendreParole() + "� " + texte + " �");
 	}
 	
 	private String prendreParole() {

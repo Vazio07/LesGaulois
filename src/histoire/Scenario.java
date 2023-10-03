@@ -15,8 +15,8 @@ public class Scenario {
 		panoramix = new Druide("Panoramix",5,10);
 		Romain minus;
 		minus = new Romain ("Minus",6);
-		panoramix.parler("Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 à 10.");
-		panoramix.parler("Je vais aller préparer une petite potion...");
+		panoramix.parler("Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 a 10.");
+		panoramix.parler("Je vais aller preparer une petite potion...");
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
 		obelix.parler("Par Bélénos, ce n'est pas juste !");
